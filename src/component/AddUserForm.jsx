@@ -11,6 +11,7 @@ const AddUserForm = () => {
     idNumber: "",
     phoneNumber: "",
     role: "",
+    
   });
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();

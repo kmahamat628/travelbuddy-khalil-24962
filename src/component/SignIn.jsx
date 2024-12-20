@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import 'font-awesome/css/font-awesome.min.css';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 const SignIn = () => {

@@ -14,18 +14,21 @@ const Settings = () => {
   });
 
   useEffect(() => {
-    setProfile({
-      ...profile,
+    setProfile((prevProfile) => ({
+      ...prevProfile,
       profilePicture: currentUser.profilePicture || "",
-    });
-  }, [currentUser]);
+    }));
+  }, [currentUser.profilePicture]); // Add currentUser.profilePicture as a dependency
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
-        setProfile({ ...profile, profilePicture: reader.result });
+        setProfile((prevProfile) => ({
+          ...prevProfile,
+          profilePicture: reader.result,
+        }));
       };
       reader.readAsDataURL(file);
     }

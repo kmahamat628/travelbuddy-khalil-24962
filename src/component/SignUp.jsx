@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import 'font-awesome/css/font-awesome.min.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 const SignUp = () => {

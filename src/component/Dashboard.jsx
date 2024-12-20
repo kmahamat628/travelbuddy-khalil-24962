@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react"; // Removed useState
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import styled from "styled-components";
@@ -6,11 +6,11 @@ import styled from "styled-components";
 const Dashboard = () => {
   const { currentUser, signOut } = useAuth();
   const navigate = useNavigate();
-  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-    setUsers(storedUsers);
+    // Remove this part since users state is not used
+    // const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+    // setUsers(storedUsers);
   }, []);
 
   if (!currentUser) return <p>Loading...</p>;

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { FaSortUp, FaSortDown } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { parse } from "json2csv";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 
